@@ -165,17 +165,18 @@
 /* ---------- Заголовки секций ---------- */
 .section-head {
   max-width: var(--content-col);
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 .section-head--center {
   text-align: center;
   margin-inline: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 .section-head__title {
   font-size: var(--fs-h2);
   line-height: var(--lh-tight);
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.01em;
 }
 .section-head__text {
   color: var(--ink-secondary);
@@ -188,26 +189,26 @@
 }
 .hero__inner {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 4rem;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4.5rem;
   align-items: center;
   min-height: calc(100vh - 72px);
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 .hero__eyebrow {
   font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--accent-dark);
-  margin: 0 0 1.4rem;
+  margin: 0 0 1.6rem;
   max-width: 24em;
 }
 .hero__title {
   font-size: var(--fs-hero);
   line-height: 1.08;
-  margin: 0 0 1.5rem;
-  letter-spacing: -0.015em;
+  margin: 0 0 1.6rem;
+  letter-spacing: -0.02em;
 }
 .hero__title-line {
   display: block;
@@ -216,13 +217,13 @@
   font-size: 1.15rem;
   color: var(--ink-secondary);
   max-width: 34em;
-  margin: 0 0 2rem;
+  margin: 0 0 2.2rem;
 }
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.8rem;
 }
 .hero__note {
   font-size: var(--fs-small);
@@ -230,7 +231,7 @@
   max-width: 30em;
 }
 
-/* Визуал первого экрана */
+/* Визуал первого экрана — выразительная «сцена» без громоздкой карточки */
 .hero__visual {
   position: relative;
   display: flex;
@@ -239,19 +240,19 @@
 }
 .visual-card {
   width: 100%;
-  max-width: 420px;
+  max-width: 460px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-panel);
   box-shadow: var(--shadow-soft);
-  padding: 2.2rem 2.2rem 2.2rem 3rem;
+  padding: 2.6rem 2.6rem 2.6rem 3.2rem;
 }
 .visual-card__mark {
   width: 34px;
   height: 34px;
   border-radius: 50%;
   border: 2.5px solid var(--accent);
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.8rem;
   position: relative;
 }
 .visual-card__mark::after {
@@ -427,15 +428,16 @@
 }
 .process__step {
   border-top: 2px solid var(--border);
-  padding-top: 1.6rem;
+  padding-top: 1.8rem;
 }
 .process__step-num {
   display: block;
   font-family: var(--font-serif);
-  font-size: 1.7rem;
+  font-size: 2.4rem;
   color: var(--accent);
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
   font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
 .process__step-title {
   font-family: var(--font-sans);
