@@ -143,6 +143,10 @@ function Hero() {
   return (
     <section id="top" className="hero section">
       <div className="container hero__inner">
+        <div className="hero__visual" aria-hidden="true">
+          <span className="hero__monogram">В</span>
+        </div>
+
         <div className="hero__content">
           <p className="hero__eyebrow">{site.role}</p>
           <h1 className="hero__title">{hero.title.split('\n').map((line, i) => (
@@ -158,15 +162,6 @@ function Hero() {
             </a>
           </div>
           <p className="hero__note">{hero.note}</p>
-        </div>
-
-        <div className="hero__visual" aria-hidden="true">
-          <div className="visual-card">
-            <div className="visual-card__mark" aria-hidden="true"></div>
-            <div className="visual-card__line"></div>
-            <div className="visual-card__line visual-card__line--short"></div>
-            <p className="visual-card__caption">Спокойный разговор, без спешки</p>
-          </div>
         </div>
       </div>
     </section>

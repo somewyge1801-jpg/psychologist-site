@@ -185,17 +185,54 @@
 
 /* ---------- Hero ---------- */
 .hero {
-  padding-top: clamp(2.5rem, 6vw, 4rem);
+  padding-top: clamp(2rem, 5vw, 3rem);
+  overflow: hidden;
 }
 .hero__inner {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 4.5rem;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 3rem;
   align-items: center;
   min-height: calc(100vh - 72px);
   padding-top: 1rem;
   padding-bottom: 2.5rem;
 }
+
+/* Монограмма — фирменный знак */
+.hero__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero__visual::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  z-index: 0;
+}
+.hero__monogram {
+  position: relative;
+  z-index: 1;
+  width: clamp(180px, 22vw, 300px);
+  height: clamp(180px, 22vw, 300px);
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: clamp(5rem, 10vw, 9rem);
+  line-height: 1;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  user-select: none;
+}
+
 .hero__eyebrow {
   font-family: var(--font-sans);
   font-size: 0.95rem;
@@ -206,9 +243,9 @@
 }
 .hero__title {
   font-size: var(--fs-hero);
-  line-height: 1.08;
+  line-height: 1.06;
   margin: 0 0 1.6rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 .hero__title-line {
   display: block;
@@ -225,62 +262,11 @@
   gap: 0.8rem;
   margin-bottom: 1.8rem;
 }
+/* Визуал первого экрана — монограмма */
 .hero__note {
   font-size: var(--fs-small);
   color: var(--ink-muted);
   max-width: 30em;
-}
-
-/* Визуал первого экрана — выразительная «сцена» без громоздкой карточки */
-.hero__visual {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.visual-card {
-  width: 100%;
-  max-width: 460px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--r-panel);
-  box-shadow: var(--shadow-soft);
-  padding: 2.6rem 2.6rem 2.6rem 3.2rem;
-}
-.visual-card__mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 2.5px solid var(--accent);
-  margin-bottom: 1.8rem;
-  position: relative;
-}
-.visual-card__mark::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-.visual-card__line {
-  height: 10px;
-  background: var(--surface-muted);
-  border-radius: 6px;
-  margin-bottom: 0.8rem;
-  width: 100%;
-}
-.visual-card__line--short {
-  width: 62%;
-  margin-bottom: 2rem;
-}
-.visual-card__caption {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--ink-secondary);
-  margin: 0;
 }
 
 /* ---------- Topics ---------- */
@@ -693,10 +679,11 @@
   .hero__inner {
     grid-template-columns: 1fr;
     min-height: 0;
-    gap: 2.5rem;
+    gap: 2.75rem;
   }
   .hero__visual {
     order: 0;
+    margin-top: 0.5rem;
   }
   .hero__content {
     order: 1;
