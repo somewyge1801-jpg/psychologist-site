@@ -1,0 +1,144 @@
+:root {
+  /* Цвета — тёплый нейтральный рамп */
+  --bg: #f7f4f0;
+  --bg-soft: #f2ede6;
+  --surface: #ffffff;
+  --surface-muted: #efeae3;
+  --border: rgba(43, 41, 38, 0.09);
+
+  --ink: #2b2926;
+  --ink-secondary: #5a5650;
+  --ink-muted: #66625b;
+
+  --accent: #9c4a2f;
+  --accent-dark: #7d3a24;
+  --accent-soft: #f0ded6;
+  --on-accent: #ffffff;
+
+  --focus: #9c4a2f;
+
+  /* Типографика */
+  --font-serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+  --font-sans: 'PT Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+
+  --fs-hero: clamp(2.1rem, 5vw, 3.4rem);
+  --fs-h2: clamp(1.5rem, 3vw, 2.1rem);
+  --fs-h3: 1.2rem;
+  --fs-body: 1.0625rem;
+  --fs-small: 0.9375rem;
+
+  --lh-tight: 1.2;
+  --lh-body: 1.65;
+
+  /* Сетка и отступы */
+  --container: 1120px;
+  --content-col: 680px;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+  --section: clamp(3.5rem, 8vw, 5.5rem);
+
+  --r-control: 10px;
+  --r-card: 14px;
+  --r-panel: 16px;
+
+  --shadow-soft: 0 1px 2px rgba(43, 41, 38, 0.04), 0 4px 14px rgba(43, 41, 38, 0.06);
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 120ms;
+  --t-med: 220ms;
+
+  /* Касание */
+  --tap: 44px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--ink);
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+.avoid-stress-gap {
+  min-height: 1px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
